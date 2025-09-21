@@ -1,0 +1,6 @@
+@ConsumirApi_HostAddress = http://localhost:5190
+
+GET {{ConsumirApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
