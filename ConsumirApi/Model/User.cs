@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using ConsumirApi.Enum;
 
 namespace ConsumirApi.Model;
 
@@ -14,4 +15,5 @@ public class User
     [Required]
     [EmailAddress]
     public string Email { get; set; }
+    public Role Role { get; set; }  
 }
