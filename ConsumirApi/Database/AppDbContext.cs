@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ConsumirApi.Model;
+using Microsoft.EntityFrameworkCore;
 
 namespace ConsumirApi.Database;
 
@@ -8,4 +9,6 @@ public class AppDbContext : DbContext
     {
         
     }
+    
+    public DbSet<User> Users { get; set; }
 }
