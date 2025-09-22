@@ -17,7 +17,6 @@ public class UserController : Microsoft.AspNetCore.Mvc.Controller
     }
     
     [HttpGet("GetUsers")]
-    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> GetUsers()
     {
         var users = await _repository.GetAll();
