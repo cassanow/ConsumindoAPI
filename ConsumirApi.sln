@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumirApi", "ConsumirApi\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumirApiTest", "ConsumirApiTest\ConsumirApiTest.csproj", "{A31A24F7-81F5-49B0-B68D-5EC58C196E9F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1", "BlazorApp1\BlazorApp1.csproj", "{ACD8DE99-F102-4EFB-9EFF-78BF77EF64FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{A31A24F7-81F5-49B0-B68D-5EC58C196E9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A31A24F7-81F5-49B0-B68D-5EC58C196E9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A31A24F7-81F5-49B0-B68D-5EC58C196E9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACD8DE99-F102-4EFB-9EFF-78BF77EF64FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACD8DE99-F102-4EFB-9EFF-78BF77EF64FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACD8DE99-F102-4EFB-9EFF-78BF77EF64FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACD8DE99-F102-4EFB-9EFF-78BF77EF64FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
