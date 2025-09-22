@@ -1,5 +1,6 @@
 ﻿using ConsumirApi.Interface;
 using ConsumirApi.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ConsumirApi.Controller;
@@ -16,6 +17,7 @@ public class UserController : Microsoft.AspNetCore.Mvc.Controller
     }
     
     [HttpGet("GetUsers")]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> GetUsers()
     {
         var users = await _repository.GetAll();
@@ -27,6 +29,7 @@ public class UserController : Microsoft.AspNetCore.Mvc.Controller
     }
 
     [HttpGet("GetUser/{username}")]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> GetUser(string username)
     {
         var user = await _repository.GetByUsername(username);
@@ -38,6 +41,7 @@ public class UserController : Microsoft.AspNetCore.Mvc.Controller
     }
 
     [HttpPost("AddUser")]
+    [Authorize(Roles = "Admin")]    
     public async Task<IActionResult> AddUser([FromBody] User user)
     {
         if(!ModelState.IsValid)
