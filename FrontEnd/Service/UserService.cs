@@ -12,38 +12,47 @@ public class UserService : IUserService
     {
         _client = client;
     }
-    public Task<IEnumerable<User>> GetUsers()
+    public async Task<IEnumerable<User>> GetUsers()
     {
-        throw new NotImplementedException();
+        return await _client.GetFromJsonAsync<IEnumerable<User>>("User/GetUsers");
     }
 
-    public Task<User> GetUser(string username)
+    public async Task<User> GetUser(string username)
     {
-        throw new NotImplementedException();
+        return await _client.GetFromJsonAsync<User>($"User/GetUser/{username}");
     }
 
-    public Task<User> AddUser(User user)
+    public async Task<bool> AddUser(User user)
     {
-        throw new NotImplementedException();
+        var response = await _client.PostAsJsonAsync("User/AddUser", user);
+        return response.IsSuccessStatusCode;
     }
 
-    public Task<User> UpdateUser(User user)
+    public async Task<bool> UpdateUser(int id, User user)
     {
-        throw new NotImplementedException();
+        var response = await _client.PutAsJsonAsync($"User/UpdateUser/{id}", user);
+        return response.IsSuccessStatusCode;    
     }
 
-    public Task<bool> DeleteUser(int id)
+    public async Task<bool> DeleteUser(int id)
     {
-        throw new NotImplementedException();
+        var response = await _client.DeleteAsync($"User/DeleteUser/{id}");
+        return response.IsSuccessStatusCode;
     }
 
-    public Task<string> Login(LoginDTO dto)
+    public async Task<string> Login(LoginDTO dto)
     {
-        throw new NotImplementedException();
+        var response = await _client.PostAsJsonAsync("api/Auth/login", dto);
+        
+        if(!response.IsSuccessStatusCode) return null;
+        
+        var token = await response.Content.ReadAsStringAsync();
+        return token;       
     }
 
-    public Task<bool> Register(User user)
+    public async Task<bool> Register(User user)
     {
-        throw new NotImplementedException();
+        var response = await _client.PostAsJsonAsync("api/Auth/register", user);
+        return response.IsSuccessStatusCode;    
     }
 }

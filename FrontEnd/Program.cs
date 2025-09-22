@@ -1,4 +1,6 @@
 using BlazorApp1.Components;
+using BlazorApp1.Interface;
+using BlazorApp1.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,7 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-builder.Services.AddScoped(o => new HttpClient{BaseAddress = new Uri("https://localhost:7045/")});
+builder.Services.AddTransient(o => new HttpClient{BaseAddress = new Uri("https://localhost:7045/")});
+builder.Services.AddTransient<IUserService, UserService>();
 
 var app = builder.Build();
 
