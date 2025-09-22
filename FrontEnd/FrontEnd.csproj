@@ -7,4 +7,9 @@
         <RootNamespace>BlazorApp1</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\ConsumirApiTest\ConsumirApiTest.csproj" />
+      <ProjectReference Include="..\ConsumirApi\ConsumirApi.csproj" />
+    </ItemGroup>
+
 </Project>
