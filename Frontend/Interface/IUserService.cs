@@ -1,7 +1,7 @@
 ﻿using ConsumirApi.DTOS;
 using ConsumirApi.Model;
 
-namespace BlazorApp1.Interface;
+namespace Frontend.Interface;
 
 public interface IUserService
 {

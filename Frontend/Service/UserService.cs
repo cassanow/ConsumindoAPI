@@ -1,8 +1,8 @@
-﻿using BlazorApp1.Interface;
-using ConsumirApi.DTOS;
+﻿using ConsumirApi.DTOS;
 using ConsumirApi.Model;
+using Frontend.Interface;
 
-namespace BlazorApp1.Service;
+namespace Frontend.Service;
 
 public class UserService : IUserService 
 {
