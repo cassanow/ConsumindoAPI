@@ -3,21 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="register.css">
 </head>
 <body>
-            <h2>Registrar</h2>
-            <label for="register-username">Username:</label>
-            <input type="text" id="register-username" placeholder="Digite seu username"><br>
-            <label for="register-email">Email:</label>
-            <input type="email" id="register-email" placeholder="Digite sua senha"><br>
-            <label for="register-password">Senha:</label>
-            <input type="password" id="register-password" placeholder="Digite sua senha"><br>
-            <label for="register-role">Role:</label>
-            <input type="number" id="register-role" name="escolha" min="0" max="1" required><br>
-            <button onclick="register()">Registrar</button>
-            <p id="register-msg" style="color:red"></p>
-            <a href="ListaUsuarios.html">Ir pra listar usuarios</a>
-            <a href="Login.html">Ir pra Login</a>
+<div>
+    <h2>Registrar</h2>
+    <label for="register-username">Username</label><br>
+    <br>
+    <input type="text" id="register-username" placeholder="Digite seu username"><br>
+    <label for="register-email">Email</label><br>
+    <br>
+    <input type="email" id="register-email" placeholder="Digite sua senha"><br>
+    <label for="register-password">Senha</label><br>
+    <br>
+    <input type="password" id="register-password" placeholder="Digite sua senha"><br>
+    <label for="register-role">Role</label><br>
+    <br>
+    <input type="number" id="register-role" placeholder="0 (admin) 1 (normal)" min="0" max="1" required><br>
+    <button onclick="register()">Registrar</button>
+    <p id="register-msg" style="color:red"></p>
+    <a href="ListaUsuarios.html">Ir pra listar usuarios</a>
+    <a href="Login.html">Ir pra Login</a>
+</div>
 </body>
 <script src="register.js"></script>
 </html>
