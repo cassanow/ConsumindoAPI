@@ -4,32 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="lista.css">
 </head>
 <body>
 <div id="mensagem" style="color: red; font-weight: bold;"></div>
-<table>
-    <thead>
-    <tr>
-        <th>ID</th>
-        <th>Username</th>
-        <th>Email</th>
-        <th>Role</th>
-    </tr>
-    </thead>
-    <tbody id="usuarios-body"></tbody>
-</table>
+
+<h2>Lista Usuários</h2>
+<div class="lista">
+    <table >
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Role</th>
+        </tr>
+        </thead>
+        <tbody id="usuarios-body"></tbody>
+    </table>
+</div>
+
 <br>
 <br>
 <br>
 
-<label for="username">Digite o Username</label>
-<input type="text" id="username" placeholder="seunome">
-<button onclick="buscarUsuario()">Confirmar</button>
+<div class="buscar-usuario">
+    <br>
+    <label for="username">Buscar um usuário específico</label><br>
+    <input type="text" id="username" placeholder="seunome"><br>
+    <button onclick="buscarUsuario()">Confirmar</button><br>
+    <a href="Registro.html">Ir pra registrar</a>
+    <a href="Login.html">Ir pra login</a>
+</div>
 
-<div id="resultado"></div>
+<div class="resultado" id="resultado"></div>
 
-<a href="Registro.html">Ir pra registrar</a>
-<a href="Login.html">Ir pra login</a>
 </body>
 <script src="listarUsuarios.js"></script>
 </html>
