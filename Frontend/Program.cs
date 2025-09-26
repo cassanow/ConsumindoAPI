@@ -6,5 +6,5 @@ var app = builder.Build();
 
 app.UseStaticFiles();
 
-app.MapFallbackToFile("ListaUsuarios.html");
+
 app.Run();
